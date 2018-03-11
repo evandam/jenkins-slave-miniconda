@@ -1,7 +1,7 @@
 FROM jenkins/jnlp-slave
 
 ENV CONDA_HOME="/opt/miniconda" \
-    PATH="$CONDA_HOME/bin:$PATH"
+    PATH="/opt/miniconda/bin:$PATH"
 
 USER root
 RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
