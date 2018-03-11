@@ -11,6 +11,7 @@ RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 RUN conda update -y conda && \
     pip install --no-cache-dir virtualenv && \
     conda install -c conda-forge pylint-django && \
+    chmod -R 777 $CONDA_HOME && \
     conda clean --all -y
 
 USER jenkins
