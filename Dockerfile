@@ -7,4 +7,5 @@ RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
     rm Miniconda*.sh
 
 RUN conda update -y conda && \
+    pip install --no-cache-dir virtualenv && \
     conda clean --all -y
